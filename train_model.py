@@ -128,3 +128,6 @@ new_data = pd.DataFrame(
 prediction = model.predict(new_data)
 print(f"Input: Max Angle = 72.0°, Min Resistance = 45000.0 Ohms")
 print(f"Predicted Recovery Status: {prediction[0]}")
+import joblib
+joblib.dump(model, "model.pkl")
+print("model.pkl saved successfully!")
